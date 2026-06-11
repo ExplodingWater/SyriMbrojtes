@@ -297,11 +297,23 @@ struct MainScrollView: View {
                 .buttonStyle(GlassCardButtonStyle())
                 .contentShape(Rectangle())
 
-                Link(destination: URL(string: "https://open-meteo.com")!) {
-                    Text("Open-Meteo & USGS · Tiranë, Albania")
-                        .font(.caption2)
+                HStack(spacing: 4) {
+                    Link(destination: URL(string: "https://open-meteo.com")!) {
+                        Text("Open-Meteo")
+                            .underline()
+                            .foregroundStyle(.white.opacity(0.25))
+                    }
+                    Text("&")
+                        .foregroundStyle(.white.opacity(0.25))
+                    Link(destination: URL(string: "https://earthquake.usgs.gov")!) {
+                        Text("USGS")
+                            .underline()
+                            .foregroundStyle(.white.opacity(0.25))
+                    }
+                    Text("· Tiranë, Albania")
                         .foregroundStyle(.white.opacity(0.25))
                 }
+                .font(.caption2)
 
                 Text("Përditësuar më \(data.updated)")
                     .font(.caption2)
