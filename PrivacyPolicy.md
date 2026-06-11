@@ -2,7 +2,7 @@
 
 **App Name / Emri i Aplikacionit:** Syri Mbrojtës (Syri)  
 **Developer / Zhvilluesi:** Martin Hafizi  
-**Contact / Kontakt:** martin.hafizi@outlook.com  
+**Contact / Kontakt:** hafizi.martin@gmail.com  
 **Last Updated / Përditësuar më:** 2026-06-11  
 
 ---

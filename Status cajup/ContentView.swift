@@ -307,10 +307,19 @@ struct MainScrollView: View {
                     .font(.caption2)
                     .foregroundStyle(.white.opacity(0.22))
 
-                Text("© 2026 Martin Hafizi")
-                    .font(.caption2)
-                    .foregroundStyle(.white.opacity(0.18))
-                    .padding(.bottom, 10)
+                HStack(spacing: 6) {
+                    Text("© 2026 Martin Hafizi")
+                        .foregroundStyle(.white.opacity(0.18))
+                    Text("·")
+                        .foregroundStyle(.white.opacity(0.18))
+                    Link(destination: URL(string: "https://gist.github.com/ExplodingWater/5de2329d88cf1bcd2cee8127bb88baa1")!) {
+                        Text("Politika e Privatësisë")
+                            .underline()
+                            .foregroundStyle(.white.opacity(0.25))
+                    }
+                }
+                .font(.caption2)
+                .padding(.bottom, 10)
             }
             .padding(.horizontal, 16)
             .padding(.top, 6)
@@ -1300,28 +1309,11 @@ struct HazardsDetailView: View {
                     }
                 }
             }
-            
-            HStack {
-                Spacer()
-                Link(destination: URL(string: "https://gist.github.com/ExplodingWater/5de2329d88cf1bcd2cee8127bb88baa1")!) {
-                    HStack(spacing: 4) {
-                        Image(systemName: "lock.shield.fill")
-                        Text("Politika e Privatësisë")
-                    }
-                    .font(.caption.bold())
-                    .foregroundStyle(.white.opacity(0.6))
-                    .padding(.vertical, 8)
-                    .padding(.horizontal, 12)
-                    .background(.white.opacity(0.06))
-                    .clipShape(Capsule())
-                }
-                .buttonStyle(PressableGlassButtonStyle())
-                Spacer()
-            }
-            .padding(.top, 4)
         }
     }
 }
+
+
 
 // MARK: - Forecast Detail
 
