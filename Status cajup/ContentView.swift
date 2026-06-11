@@ -1300,6 +1300,25 @@ struct HazardsDetailView: View {
                     }
                 }
             }
+            
+            HStack {
+                Spacer()
+                Link(destination: URL(string: "https://gist.github.com/ExplodingWater/5de2329d88cf1bcd2cee8127bb88baa1")!) {
+                    HStack(spacing: 4) {
+                        Image(systemName: "lock.shield.fill")
+                        Text("Politika e Privatësisë")
+                    }
+                    .font(.caption.bold())
+                    .foregroundStyle(.white.opacity(0.6))
+                    .padding(.vertical, 8)
+                    .padding(.horizontal, 12)
+                    .background(.white.opacity(0.06))
+                    .clipShape(Capsule())
+                }
+                .buttonStyle(PressableGlassButtonStyle())
+                Spacer()
+            }
+            .padding(.top, 4)
         }
     }
 }
